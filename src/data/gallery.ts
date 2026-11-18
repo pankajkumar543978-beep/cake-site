@@ -1,0 +1,136 @@
+export interface GalleryCake {
+  id: string;
+  title: string;
+  category: "all" | "birthday" | "wedding" | "baby-shower" | "cupcakes" | "brownies-dry";
+  categoryLabel: string;
+  image: string;
+  servings: string;
+  leadTime: string;
+  description: string;
+  tags: string[];
+}
+
+export const galleryCakes: GalleryCake[] = [
+  {
+    id: "g1",
+    title: "30th Milestone Gold & Black Sphere Cake",
+    category: "birthday",
+    categoryLabel: "Birthday Cake",
+    image: "/images/gmaps/gmaps-photo-1.jpg",
+    servings: "15–20 servings",
+    leadTime: "3–4 days",
+    description: "Modern textured white buttercream with metallic gold splash, bold 30 acrylic topper, and cascading glossy black and gold spheres.",
+    tags: ["Milestone 30th", "Black & Gold", "Modern Luxury", "Birthday"],
+  },
+  {
+    id: "g2",
+    title: "Bella Red Velvet & Cream Piping Birthday Cake",
+    category: "birthday",
+    categoryLabel: "Birthday Cake",
+    image: "/images/gmaps/gmaps-photo-4.jpg",
+    servings: "12–16 servings",
+    leadTime: "2–3 days",
+    description: "Tall single tier with rich red velvet crumb base, delicate crown piped buttercream rosettes, and sparkling gold Happy Birthday lettering.",
+    tags: ["Red Velvet", "Tall Tier", "Buttercream Piping", "Birthday"],
+  },
+  {
+    id: "g3",
+    title: "Vintage Lambeth & Floral Birthday Cake",
+    category: "birthday",
+    categoryLabel: "Birthday Cake",
+    image: "/images/gmaps/gmaps-photo-10.jpg",
+    servings: "16–22 servings",
+    leadTime: "3–4 days",
+    description: "Elegant vintage lambeth piped borders with delicate buttercream scrolls, pastel blush palette, and fresh floral accents.",
+    tags: ["Vintage Lambeth", "Floral Accent", "Piped Buttercream", "Birthday"],
+  },
+  {
+    id: "g4",
+    title: "18th Milestone Two-Tier Marble & Royal Blue Cake",
+    category: "birthday",
+    categoryLabel: "Birthday Cake",
+    image: "/images/instagram/ig-cake-6.jpg",
+    servings: "30–35 servings",
+    leadTime: "4–5 days",
+    description: "Grand two-tier cake with gold veined marble buttercream, custom 18 milestone number, and royal blue accent spheres.",
+    tags: ["2-Tier", "18th Birthday", "Marble Buttercream", "Royal Blue"],
+  },
+  {
+    id: "g5",
+    title: "Grand Monogram 'A & N' Two-Tier Wedding Cake",
+    category: "wedding",
+    categoryLabel: "Wedding Cake",
+    image: "/images/instagram/ig-cake-1.jpg",
+    servings: "45–60 servings",
+    leadTime: "2–3 weeks",
+    description: "Opulent two-tier ivory buttercream adorned with hundreds of delicate pearl sugarcraft beads, fresh cream florals, and custom gold initials.",
+    tags: ["2-Tier Wedding", "Ivory & Pearls", "Bridal Luxury", "Monogram"],
+  },
+  {
+    id: "g6",
+    title: "Two-Tier Fresh Red Rose & Pearl Wedding Cake",
+    category: "wedding",
+    categoryLabel: "Wedding Cake",
+    image: "/images/gmaps/gmaps-photo-8.jpg",
+    servings: "50–65 servings",
+    leadTime: "2–3 weeks",
+    description: "Classic textured ivory buttercream tiers accented with deep crimson red roses, fresh eucalyptus foliage, and hand-placed edible pearl drops.",
+    tags: ["2-Tier", "Red Roses", "Wedding Centerpiece", "Textured Cream"],
+  },
+  {
+    id: "g7",
+    title: "Two-Tier Blush Rose & Gold Leaf Celebration Cake",
+    category: "baby-shower",
+    categoryLabel: "Baby Shower",
+    image: "/images/instagram/ig-cake-4.jpg",
+    servings: "25–35 servings",
+    leadTime: "4 days",
+    description: "Romantic blush roses, trailing gold leaf flakes, and tall ivory tiers ideal for baby showers, bridal showers, and elegant anniversaries.",
+    tags: ["Blush Florals", "Gold Leaf", "Baby Shower", "Elegant"],
+  },
+  {
+    id: "g8",
+    title: "Graduation Cap & Diploma Milestone Cake",
+    category: "baby-shower",
+    categoryLabel: "Milestone Cake",
+    image: "/images/gmaps/gmaps-photo-10.jpg",
+    servings: "15–20 servings",
+    leadTime: "3 days",
+    description: "Clean minimalist celebration cake with handcrafted graduation mortarboard cap, rolled parchment diploma, and yellow tassel detailing.",
+    tags: ["Graduation", "Academic Milestone", "Diploma", "Clean Finish"],
+  },
+  {
+    id: "g9",
+    title: "Floral Rosette Artisan Cupcakes Box",
+    category: "cupcakes",
+    categoryLabel: "Artisan Cupcakes",
+    image: "/images/cupcakes-artisan.jpg",
+    servings: "Box of 12",
+    leadTime: "2 days",
+    description: "Vanilla and chocolate cupcakes crowned with realistic buttercream ranunculus and peony blooms, pearls, and pastel tones.",
+    tags: ["Floral Piping", "Artisan Cupcakes", "Swiss Meringue", "Gift Box"],
+  },
+  {
+    id: "g10",
+    title: "Lotus Biscoff Spiced Caramel Cake",
+    category: "brownies-dry",
+    categoryLabel: "Indulgence Cakes",
+    image: "/images/gmaps/gmaps-photo-6.jpg",
+    servings: "10–12 servings",
+    leadTime: "2 days",
+    description: "Rich spiced sponge frosted with smooth Lotus Biscoff buttercream, toasted cookie crumb ring, and topped with authentic whole Biscoff cookies.",
+    tags: ["Lotus Biscoff", "Cookie Butter", "Caramel Drip", "Indulgence"],
+  },
+  // {
+  //   id: "g11",
+  //   title: "Legendary Exotic Plum Holiday Cake",
+  //   category: "brownies-dry",
+  //   categoryLabel: "Dry Cakes",
+  //   image: "/images/exotic-plum-cake-banner.jpg",
+  //   servings: "8–12 servings",
+  //   leadTime: "Available now / Pre-order",
+  //   description: "Traditional matured holiday plum cake packed with rum-soaked raisins, dried berries, and aromatic holiday spices.",
+  //   tags: ["Exotic Plum Cake", "Holiday Special", "Dry Fruit", "Seasonal"],
+  // },
+];
+      
