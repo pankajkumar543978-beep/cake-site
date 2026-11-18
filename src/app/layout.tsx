@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { businessData } from "@/data/business";
+import { ScrollToTop } from "@/components/common/ScrollToTop";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -143,6 +144,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-[#FFF9F3] text-[#382824] selection:bg-[#F7E8E7] selection:text-[#382824]">
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

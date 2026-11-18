@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, CalendarHeart, ChevronRight } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/Icons";
 import { businessData } from "@/data/business";
@@ -10,6 +11,15 @@ import { businessData } from "@/data/business";
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    setIsOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +58,8 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo with Authentic Circular Emblem */}
         <Link
           href="/"
+          onClick={handleLogoClick}
+          aria-label="Cakes by Sia - Return to Home"
           className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none focus:ring-2 focus:ring-[#C87D7E] rounded-full pr-2"
         >
           <div className="relative w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#C87D7E]/40 shadow-sm flex-shrink-0 group-hover:border-[#C87D7E] transition-all group-hover:scale-105">
@@ -61,7 +73,7 @@ export const Navbar: React.FC = () => {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <span className="font-serif text-xl sm:text-2xl md:text-[26px] font-semibold tracking-tight text-[#382824] group-hover:text-[#C87D7E] transition-colors leading-tight">
+            <span className="font-serif text-xl sm:text-2xl md:text-[26px] font-semibold tracking-tight text-[#C87D7E] group-hover:text-[#A96162] transition-colors leading-tight">
               Cakes by Sia
             </span>
             <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-medium text-[#9B827C] -mt-0.5 sm:mt-0">
@@ -143,7 +155,12 @@ export const Navbar: React.FC = () => {
           >
             {/* Dropdown Header with Brand & Inside Close Button */}
             <div className="flex items-center justify-between pb-2 border-b border-[#EADCD2]/70">
-              <div className="flex items-center gap-2">
+              <Link
+                href="/"
+                onClick={handleLogoClick}
+                className="flex items-center gap-2 group cursor-pointer"
+                aria-label="Cakes by Sia - Return to Home"
+              >
                 <div className="relative w-6 h-6 rounded-full overflow-hidden border border-[#C87D7E]/30 flex-shrink-0">
                   <Image
                     src="/images/logo.png"
@@ -153,10 +170,10 @@ export const Navbar: React.FC = () => {
                     className="object-cover"
                   />
                 </div>
-                <span className="font-serif font-semibold text-[#382824] text-sm">
+                <span className="font-serif font-semibold text-[#C87D7E] group-hover:text-[#A96162] text-sm transition-colors">
                   Cakes by Sia
                 </span>
-              </div>
+              </Link>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 rounded-full text-[#9B827C] hover:text-[#382824] hover:bg-[#382824]/5 transition-colors"
