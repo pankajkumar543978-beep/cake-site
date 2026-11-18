@@ -50,8 +50,8 @@ export const InstagramGallery: React.FC = () => {
     },
     {
       id: "ig-2",
-      title: "Artisanal Celebration Cake Detail",
-      image: "/images/instagram/ig-cake-2.jpg",
+      title: "Royal Crown & Candle Pink Birthday Cake",
+      image: "/images/instagram/ig-royal-crown-cake.png",
       url: "https://www.instagram.com/cakesbysia47/",
       likes: "Recent Post",
     },
@@ -71,8 +71,8 @@ export const InstagramGallery: React.FC = () => {
     },
     {
       id: "ig-5",
-      title: "Hand-Crafted Sweet Treat Creation",
-      image: "/images/instagram/ig-cake-5.jpg",
+      title: "Class of 2026 Graduation Balloon Cake",
+      image: "/images/instagram/ig-graduation-cake.png",
       url: "https://www.instagram.com/cakesbysia47/",
       likes: "Recent Post",
     },
