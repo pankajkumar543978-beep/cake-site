@@ -95,7 +95,10 @@ export const EnquiryForm: React.FC = () => {
     if (!validate()) return;
     setSubmitted(true);
     const text = generateMessageText();
-    const whatsappNum = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "13683997686";
+    const whatsappNum =
+      process.env.NEXT_PROD_WHATSAPP_NUMBER ||
+      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ||
+      "13683997686";
     const url = `https://wa.me/${whatsappNum}?text=${text}`;
     window.open(url, "_blank");
   };
@@ -108,7 +111,10 @@ export const EnquiryForm: React.FC = () => {
       `Cake Inquiry: ${formData.name} (${formData.eventDate})`
     );
     const body = generateMessageText().replace(/%0A/g, "\n");
-    const emailTo = process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "contact@cakesbysia.ca";
+    const emailTo =
+      process.env.NEXT_PROD_BUSINESS_EMAIL ||
+      process.env.NEXT_PUBLIC_BUSINESS_EMAIL ||
+      "contact@cakesbysia.ca";
     window.location.href = `mailto:${emailTo}?subject=${subject}&body=${encodeURIComponent(body)}`;
   };
 

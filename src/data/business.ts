@@ -39,23 +39,42 @@ export interface BusinessInfo {
 }
 
 export const businessData: BusinessInfo = {
-  name: process.env.NEXT_PUBLIC_BUSINESS_NAME || "Cakes by Sia",
+  name:
+    process.env.NEXT_PROD_BUSINESS_NAME ||
+    process.env.NEXT_PUBLIC_BUSINESS_NAME ||
+    "Cakes by Sia",
   tagline: "Custom Cakes & Sweet Treats Handcrafted with Love in Calgary",
   baker: "Sia",
   bakerTag: "@sia2910",
-  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "+13683997686",
-  phoneFormatted: process.env.NEXT_PUBLIC_BUSINESS_PHONE_FORMATTED || "+1 (368) 399-7686",
+  phone:
+    process.env.NEXT_PROD_BUSINESS_PHONE ||
+    process.env.NEXT_PUBLIC_BUSINESS_PHONE ||
+    "+13683997686",
+  phoneFormatted:
+    process.env.NEXT_PROD_BUSINESS_PHONE_FORMATTED ||
+    process.env.NEXT_PUBLIC_BUSINESS_PHONE_FORMATTED ||
+    "+1 (368) 399-7686",
   whatsappUrl:
+    process.env.NEXT_PROD_WHATSAPP_URL ||
     process.env.NEXT_PUBLIC_WHATSAPP_URL ||
     "https://wa.me/13683997686?text=Hi%20Sia,%20I%20would%20like%20to%20inquire%20about%20a%20custom%20cake!",
   instagram: {
-    handle: process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "@cakesbysia47",
-    url: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/cakesbysia47/",
+    handle:
+      process.env.NEXT_PROD_INSTAGRAM_HANDLE ||
+      process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE ||
+      "@cakesbysia47",
+    url:
+      process.env.NEXT_PROD_INSTAGRAM_URL ||
+      process.env.NEXT_PUBLIC_INSTAGRAM_URL ||
+      "https://www.instagram.com/cakesbysia47/",
     followers: "709",
     postsCount: "179",
   },
   googleMaps: {
-    url: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/NFsJFUsd3qfGAYJd7",
+    url:
+      process.env.NEXT_PROD_GOOGLE_MAPS_URL ||
+      process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL ||
+      "https://maps.app.goo.gl/NFsJFUsd3qfGAYJd7",
     directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=51.1865651,-114.0556996",
     plusCode: "5WPV+JP Calgary, Alberta, Canada",
     rating: 4.9,

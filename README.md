@@ -45,14 +45,16 @@ cp .env.example .env.local
 
 | Variable | Description | Default Fallback |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Public production URL | `https://cakes-by-sia.vercel.app` |
-| `NEXT_PUBLIC_BUSINESS_NAME` | Business brand name | `Cakes by Sia` |
-| `NEXT_PUBLIC_BUSINESS_PHONE` | Direct call phone number | `+13683997686` |
-| `NEXT_PUBLIC_BUSINESS_PHONE_FORMATTED` | Display phone format | `+1 (368) 399-7686` |
-| `NEXT_PUBLIC_BUSINESS_EMAIL` | Contact & inquiry email | `contact@cakesbysia.ca` |
-| `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp messaging number | `13683997686` |
-| `NEXT_PUBLIC_INSTAGRAM_URL` | Verified Instagram profile | `https://www.instagram.com/cakesbysia47/` |
-| `NEXT_PUBLIC_GOOGLE_MAPS_URL` | Google Maps location profile | `https://maps.app.goo.gl/NFsJFUsd3qfGAYJd7` |
+| `NEXT_PROD_SITE_URL` | Public production URL | `https://cakes-by-sia.vercel.app` |
+| `NEXT_PROD_BUSINESS_NAME` | Business brand name | `Cakes by Sia` |
+| `NEXT_PROD_BUSINESS_PHONE` | Direct call phone number | `+13683997686` |
+| `NEXT_PROD_BUSINESS_PHONE_FORMATTED` | Display phone format | `+1 (368) 399-7686` |
+| `NEXT_PROD_BUSINESS_EMAIL` | Contact & inquiry email | `contact@cakesbysia.ca` |
+| `NEXT_PROD_WHATSAPP_NUMBER` | WhatsApp messaging number | `13683997686` |
+| `NEXT_PROD_WHATSAPP_URL` | Pre-filled WhatsApp link | `https://wa.me/13683997686...` |
+| `NEXT_PROD_INSTAGRAM_HANDLE` | Instagram handle | `@cakesbysia47` |
+| `NEXT_PROD_INSTAGRAM_URL` | Verified Instagram profile | `https://www.instagram.com/cakesbysia47/` |
+| `NEXT_PROD_GOOGLE_MAPS_URL` | Google Maps location profile | `https://maps.app.goo.gl/NFsJFUsd3qfGAYJd7` |
 
 ### 4. Run Development Server
 ```bash
