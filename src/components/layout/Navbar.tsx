@@ -48,23 +48,23 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo with Authentic Circular Emblem */}
         <Link
           href="/"
-          className="group flex items-center gap-3 sm:gap-3.5 focus:outline-none focus:ring-2 focus:ring-[#C87D7E] rounded-full pr-2"
+          className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none focus:ring-2 focus:ring-[#C87D7E] rounded-full pr-2"
         >
-          <div className="relative w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#C87D7E]/40 shadow-sm flex-shrink-0 group-hover:border-[#C87D7E] transition-all group-hover:scale-105">
+          <div className="relative w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#C87D7E]/40 shadow-sm flex-shrink-0 group-hover:border-[#C87D7E] transition-all group-hover:scale-105">
             <Image
               src="/images/logo.png"
               alt="Cakes by Sia Calgary Official Logo"
               fill
-              sizes="(max-width: 768px) 48px, 56px"
+              sizes="(max-width: 768px) 52px, 56px"
               className="object-cover"
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-2xl md:text-3xl font-semibold tracking-tight text-[#382824] group-hover:text-[#C87D7E] transition-colors leading-none">
+          <div className="flex flex-col justify-center">
+            <span className="font-serif text-xl sm:text-2xl md:text-[26px] font-semibold tracking-tight text-[#382824] group-hover:text-[#C87D7E] transition-colors leading-tight">
               Cakes by Sia
             </span>
-            <span className="text-[10px] tracking-widest uppercase font-medium text-[#9B827C] mt-1">
+            <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-medium text-[#9B827C] -mt-0.5 sm:mt-0">
               Livingston · Calgary
             </span>
           </div>

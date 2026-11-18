@@ -20,21 +20,21 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#FFF9F3]/10">
           {/* Column 1: Brand & Bio */}
           <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-[#D99A9B]/40 shadow-sm flex-shrink-0">
+            <Link href="/" className="inline-flex items-center gap-2.5 sm:gap-3 group">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#D99A9B]/40 shadow-sm flex-shrink-0">
                 <Image
                   src="/images/logo.png"
                   alt="Cakes by Sia Calgary Logo"
                   fill
-                  sizes="44px"
+                  sizes="48px"
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-tight text-[#FFF9F3] group-hover:text-[#D99A9B] transition-colors leading-none">
+              <div className="flex flex-col justify-center">
+                <span className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#FFF9F3] group-hover:text-[#D99A9B] transition-colors leading-tight">
                   Cakes by Sia
                 </span>
-                <span className="text-[10px] tracking-widest uppercase font-medium text-[#D99A9B] mt-1">
+                <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-medium text-[#D99A9B] -mt-0.5 sm:mt-0">
                   Livingston · Calgary
                 </span>
               </div>
