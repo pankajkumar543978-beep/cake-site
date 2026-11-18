@@ -121,16 +121,5 @@ export const galleryCakes: GalleryCake[] = [
     description: "Rich spiced sponge frosted with smooth Lotus Biscoff buttercream, toasted cookie crumb ring, and topped with authentic whole Biscoff cookies.",
     tags: ["Lotus Biscoff", "Cookie Butter", "Caramel Drip", "Indulgence"],
   },
-  // {
-  //   id: "g11",
-  //   title: "Legendary Exotic Plum Holiday Cake",
-  //   category: "brownies-dry",
-  //   categoryLabel: "Dry Cakes",
-  //   image: "/images/exotic-plum-cake-banner.jpg",
-  //   servings: "8–12 servings",
-  //   leadTime: "Available now / Pre-order",
-  //   description: "Traditional matured holiday plum cake packed with rum-soaked raisins, dried berries, and aromatic holiday spices.",
-  //   tags: ["Exotic Plum Cake", "Holiday Special", "Dry Fruit", "Seasonal"],
-  // },
 ];
       

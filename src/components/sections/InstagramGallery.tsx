@@ -110,7 +110,7 @@ export const InstagramGallery: React.FC = () => {
                 </span>
               </div>
               <p className="text-xs text-[#6B5550] mt-0.5">
-                👩‍🍳 {businessData.baker} ({businessData.bakerTag}) · {businessData.instagram.followers} Followers · {businessData.instagram.postsCount} Posts
+                👩‍🍳 {businessData.baker} ({businessData.bakerTag})
               </p>
             </div>
           </div>
