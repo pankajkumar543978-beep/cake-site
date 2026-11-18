@@ -140,17 +140,17 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown: Compact, Translucent Glassmorphic Menu */}
+      {/* Mobile Dropdown: Clean, Solid Opaque Luxury Menu */}
       {isOpen && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="fixed inset-0 top-20 z-50 bg-black/20 backdrop-blur-xs lg:hidden animate-fade-in px-4 pt-2"
+          className="fixed inset-0 top-16 sm:top-[72px] z-50 bg-[#382824]/40 backdrop-blur-sm lg:hidden animate-fade-in px-4 pt-3 pb-6 flex flex-col justify-start"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="w-full max-w-sm ml-auto bg-[#FFF9F3]/95 backdrop-blur-xl border border-[#EADCD2] rounded-2xl shadow-2xl p-4 flex flex-col gap-3 animate-slide-down"
+            className="w-full max-w-sm ml-auto bg-[#FFF9F3] border-2 border-[#EADCD2] rounded-2xl shadow-2xl p-4 flex flex-col gap-3 animate-slide-down"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Dropdown Header with Brand & Inside Close Button */}
@@ -190,7 +190,7 @@ export const Navbar: React.FC = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="py-2.5 px-2 text-sm font-medium text-[#382824] hover:text-[#C87D7E] hover:bg-white/40 rounded-lg transition-colors flex items-center justify-between"
+                  className="py-2.5 px-3 text-sm font-medium text-[#382824] hover:text-[#C87D7E] hover:bg-[#FAF1EF] rounded-xl transition-colors flex items-center justify-between"
                 >
                   <span>{link.label}</span>
                   <ChevronRight className="w-3.5 h-3.5 text-[#9B827C]/60" />

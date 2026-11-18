@@ -7,11 +7,15 @@ export const ScrollToTop: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const shouldShow = window.scrollY > 300;
+          setVisible((prev) => (prev !== shouldShow ? shouldShow : prev));
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -33,7 +37,7 @@ export const ScrollToTop: React.FC = () => {
       type="button"
       onClick={scrollToTop}
       aria-label="Go to top of page"
-      className={`fixed bottom-20 right-4 sm:right-6 lg:bottom-8 lg:right-8 z-40 p-3 rounded-full bg-[#C87D7E] text-[#FFF9F3] hover:bg-[#A96162] hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C87D7E] focus:ring-offset-2 ${
+      className={`fixed bottom-20 right-4 sm:right-6 lg:bottom-8 lg:right-8 z-40 p-3 rounded-full bg-[#C87D7E] text-[#FFF9F3] hover:bg-[#A96162] hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C87D7E] focus:ring-offset-2 translate-z-0 will-change-transform [backface-visibility:hidden] ${
         visible
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 translate-y-4 pointer-events-none"

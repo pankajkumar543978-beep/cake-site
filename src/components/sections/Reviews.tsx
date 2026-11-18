@@ -31,25 +31,27 @@ export const Reviews: React.FC = () => {
           </div>
 
           {/* Rating Summary Card */}
-          <div className="bg-[#FAF1EF] p-5 rounded-3xl border border-[#EADCD2] flex items-center gap-5 shrink-0">
+          <div className="bg-[#FAF1EF] p-4 sm:p-5 rounded-3xl border border-[#EADCD2] flex items-center gap-3.5 sm:gap-5 shrink-0 max-w-full">
             <div className="text-center shrink-0">
-              <span className="font-serif text-4xl font-bold text-[#382824]">
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-[#382824]">
                 4.9
               </span>
               <div className="flex text-[#C6A36A] mt-1 shrink-0">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                  <Star key={i} className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-current" />
                 ))}
               </div>
             </div>
-            <div className="border-l border-[#EADCD2] pl-4 text-xs text-[#6B5550] space-y-0.5 whitespace-nowrap">
-              <p className="font-semibold text-[#382824]">Google Verified Rating</p>
-              <p>{businessData.googleMaps.reviewCount} Customer Reviews (33 ★★★★★)</p>
+            <div className="border-l border-[#EADCD2] pl-3.5 sm:pl-4 text-xs text-[#6B5550] space-y-0.5 min-w-0">
+              <p className="font-semibold text-[#382824] text-xs sm:text-sm">Google Verified Rating</p>
+              <p className="text-[11px] sm:text-xs text-[#6B5550]">
+                {businessData.googleMaps.reviewCount} Reviews <span className="text-[#C6A36A] font-semibold">(33 ★★★★★)</span>
+              </p>
               <a
                 href={businessData.googleMaps.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-[#C87D7E] font-medium hover:underline pt-0.5"
+                className="inline-flex items-center gap-1 text-[#C87D7E] font-medium hover:underline pt-0.5 text-[11px] sm:text-xs"
               >
                 <span>View all reviews on Google</span>
                 <ExternalLink className="w-3 h-3" />

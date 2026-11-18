@@ -9,7 +9,7 @@ export const MobileStickyBar: React.FC = () => {
   return (
     <aside
       aria-label="Mobile quick actions"
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFF9F3]/95 backdrop-blur-md border-t border-[#EADCD2] p-2 shadow-[0_-4px_16px_rgba(56,40,36,0.08)]"
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFF9F3] border-t border-[#EADCD2] p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgba(56,40,36,0.1)] translate-z-0 will-change-transform [backface-visibility:hidden]"
     >
       <div className="grid grid-cols-4 gap-1.5 max-w-md mx-auto">
         {/* Direct Phone Call */}
